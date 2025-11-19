@@ -20,7 +20,7 @@ COPY app/ /app
 
 EXPOSE ${PORT}
 
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+HEALTHCHECK --interval=120s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:${PORT}/health || exit 1
 
 # Command to run the server
